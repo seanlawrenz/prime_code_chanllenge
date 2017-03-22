@@ -56,10 +56,15 @@ describe('primeNumberGenerator', function(){
 						primeNumber.push(i)
 					}
 				}
-				return primeNumber
+				if (primeNumber.length === 0){
+					return 'no primes in that range'
+				}else{
+					return primeNumber
+				}
 			}
 
 			expect(printPrime(7900, 7920)).to.deep.equal([ 7901, 7907, 7919 ]);
+			expect(printPrime(10,9)).to.equal('no primes in that range');
 		});
 	});
 });
