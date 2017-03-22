@@ -17,7 +17,7 @@ describe('isPrime', function() {
 			return number > 1;	
 		}
 
-		assert.equal(isPrime(20), false);
+		assert.equal(isPrime(7901), true);
 	});
 });
 
@@ -34,7 +34,7 @@ describe('sortingArray', function(){
 
 describe('primeNumberGenerator', function(){
 	describe('printPrime', function(){
-		it('should find all prime numbers up to a limit', function(){
+		it('should find all prime numbers in a number range', function(){
 			var isPrime =  function(number) {
 				for(var i = 2; i < number; i++) {
 					if(number % i === 0) {
