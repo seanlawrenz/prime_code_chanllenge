@@ -34,6 +34,10 @@ function primeNumberGenerator(){
 		alert('Please input numbers only');
 	}else{
 		var primeNumbers = printPrime(input1,input2);
-		document.getElementById('returnAnswer').innerHTML = '<p>The prime numbers between ' + input1 + ' and ' + input2 + ' are ' + primeNumbers + '</p>';
+		if(primeNumbers == 'no primes in that range'){
+			document.getElementById('returnAnswer').innerHTML = '<p>There are ' + primeNumbers + '</p>';
+		}else{
+			document.getElementById('returnAnswer').innerHTML = '<p>The prime numbers between ' + input1 + ' and ' + input2 + ' are ' + primeNumbers + '</p>';
+		}
 	}
 }
